@@ -71,10 +71,12 @@ var quotes = [
 
 function getRandomQuote () {
    
+   //declared variable for a random number
    var randomNumber = Math.floor(Math.random() * (quotes.length));
-   
+   // declared variable for a random quote
    var randomQuote = quotes[randomNumber];
 
+   // function returns randomQuote value
   return randomQuote;
 } 
 
@@ -84,8 +86,13 @@ function getRandomQuote () {
 
 function printQuote () {
     
+    // declared quotes variable which calls getRandomQuote function
     var quotes = getRandomQuote();
+
+    // declared a variable for the quote placeholder 
     var quoteContainer = document.getElementById("quote-box");
+
+    // declared quoteString to build all elements for the load-quote action button on the index.html file
     var quoteString = `<p class="quote"> ${quotes.quote}</p><p class="source"> ${quotes.source}`;
         
         if (quotes.citation) {quoteString += `<span class="citation">${quotes.citation}</span>`}
@@ -95,7 +102,7 @@ function printQuote () {
         else {quoteString += '</p>'};
           quoteContainer.innerHTML = quoteString;
 
-          //assigns random color value to document background color 
+          //assigns and then calls the getRandomColor function the waits for the returned RGB value
           document.body.style.backgroundColor = getRandomColor ();
 }
 
@@ -105,18 +112,21 @@ function printQuote () {
 
 function getRandomColor () {
    
-   var green = Math.floor(Math.random() * 256 );
+   // declares 3 variables for RGB and randomly selects a number which is assigned for each color individually
    var red = Math.floor(Math.random() * 256 );
+   var green = Math.floor(Math.random() * 256 );  
    var blue = Math.floor(Math.random() * 256 );
    
+   // declares and puts together the entire RGB color value
    var randomColor = 'rgb(' + red + ',' + green + ',' + blue + ')';
   
+  // returns the random RGB color value
   return randomColor;
 }
 
 
 /****
- Function that automatically refreshes a quote every 1 minute
+ Function that automatically refreshes a quote every minute
  ***/
 
 window.setInterval(function(){printQuote ();}, 60000);
