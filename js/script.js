@@ -14,50 +14,66 @@ var quotes = [
   quote: "This Is Heavy!",
   source: "Marty Mcfly",
   citation: "Back to the Future 1",
-  year: "1985"
+  year: "1985",
+  culture: "American Film"
   },
    {
   quote: "It's supposed to be hard. If it were easy, everyone would do it.",
   source: "Jimmy Dugan",
   citation: "A League of Their Own",
-  year: "1993"
+  year: "1993",
+  culture: "American Film"
   },
   {
   quote: "1.21 Gigawatts!?!",
-  source: "Doc Brown",
-  citation: "Back to the Future 1",
-  year: "1985"
+  source: "Doc Brown"
+ 
+  },
+  {
+  quote: "1.21 Gigawatts!?!",
+  source: "Doc Brown"
+ 
+  },
+  {
+  quote: "1.21 Gigawatts!?!",
+  source: "Doc Brown"
+ 
   },
    {
   quote: "It's not about how hard you can hit; it's about how hard you can get hit and keep moving forward.",
   source: "Rocky Balboa",
   citation: "Rocky",
-  year: "1976"
+  year: "1976",
+  culture: "American Film"
   },
   {
   quote: "If my calculations are correct, when this baby hits 88 miles per hour, you're gonna see some serious shit!",
   source: "Doc Brown",
   citation: "Back to the Future 1",
-  year: "1985"
+  year: "1985",
+  culture: "American Film"
   },
   {
   quote: "I guess you guys aren’t ready for that yet. But your kids are gonna love it.",
   source: "Marty Mcfly",
   citation: "Back to the Future 1",
-  year: "1985"
+  year: "1985",
+  culture: "American Film"
   },
   {
   quote: "“Roads? Where we’re going, we don’t need roads.”",
   source: "Doc Brown",
   citation: "Back to the Future 2",
-  year: "1989"
+  year: "1989",
+  culture: "American Film"
   },
  
   {
   quote: "It does not do to dwell on dreams and forget to live.",
   source: "Albus Dumbledore", 
   citation: "Harry Potter and the Sorcerer's Stone",
-  year: "1997"
+  year: "1997",
+  culture: "UK Film"
   },
  
  
@@ -98,6 +114,8 @@ function printQuote () {
         if (quotes.citation) {quoteString += `<span class="citation">${quotes.citation}</span>`}
         
         if (quotes.year) {quoteString += `<span class="year"> ${quotes.year} </span></p>`}
+
+        if (quotes.culture) {quoteString += `<h2 class="culture"> ${quotes.culture} </h2></p>`}
         
         else {quoteString += '</p>'};
           quoteContainer.innerHTML = quoteString;
