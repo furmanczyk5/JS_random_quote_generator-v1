@@ -8,7 +8,7 @@ project 1 -  Random Quote Generator
  * `quotes` array 
 ***/
 
-var quotes = [
+let quotes = [
  
   {
   quote: "This Is Heavy!",
@@ -88,9 +88,9 @@ var quotes = [
 function getRandomQuote () {
    
    //declared variable for a random number
-   var randomNumber = Math.floor(Math.random() * (quotes.length));
+   const randomNumber = Math.floor(Math.random() * (quotes.length));
    // declared variable for a random quote
-   var randomQuote = quotes[randomNumber];
+   const randomQuote = quotes[randomNumber];
 
    // function returns randomQuote value
   return randomQuote;
@@ -131,12 +131,12 @@ function printQuote () {
 function getRandomColor () {
    
    // declares 3 variables for RGB and randomly selects a number which is assigned for each color individually
-   var red = Math.floor(Math.random() * 256 );
-   var green = Math.floor(Math.random() * 256 );  
-   var blue = Math.floor(Math.random() * 256 );
+   const red = Math.floor(Math.random() * 256 );
+   const green = Math.floor(Math.random() * 256 );  
+   const blue = Math.floor(Math.random() * 256 );
    
    // declares and puts together the entire RGB color value
-   var randomColor = 'rgb(' + red + ',' + green + ',' + blue + ')';
+   const randomColor = `rgb(${red}, ${green}, ${blue})`;
   
   // returns the random RGB color value
   return randomColor;
